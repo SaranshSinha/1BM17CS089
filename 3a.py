@@ -1,14 +1,12 @@
-import string
-import random
-from random import randint
-while True:
-    s=string.printable
+def allDivisors(n):
+    li=[]
+    for i in range(1,n+1):
+        if n%i==0:
+            li.append(i)
 
-    n=input("\nenter anything")
-    x=random.choice([10,11,12,13,14,15])
-    print(s[randint(0,10)],end="")
-    print(s[randint(11,37)],end="")
-    print(s[randint(63,89)],end="")
-    #print(s[randint(90,99)],end="")
-    for i in range(x-3):
-        print(s[randint(0,99)],end="")
+    return li
+l2=[]
+n=int(input("enter the number"))
+print("The lis of divisors are: ")
+l2=allDivisors(n)
+print(l2)
